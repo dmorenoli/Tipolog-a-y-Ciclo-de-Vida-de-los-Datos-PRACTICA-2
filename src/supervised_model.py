@@ -16,7 +16,7 @@ def run_logistic_regression(df: pd.DataFrame) -> None:
         df (pd.DataFrame): Input dataframe.
     """
 
-    X = df.drop(columns=["Outcome", "AgeGroup", "BMI_Category"])
+    X = df.drop(columns=["Outcome", "AgeGroup", "BMI_Category", "Glucose_Category"])
 
     y = df["Outcome"]
 
