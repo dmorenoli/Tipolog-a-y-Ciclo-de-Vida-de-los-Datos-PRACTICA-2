@@ -2,7 +2,7 @@
 Main execution file.
 """
 
-from src.load_data import load_dataset
+from src.load_data import load_dataset, export_data
 from src.preprocessing import (
     replace_invalid_zeros,
     impute_missing_values,
@@ -42,6 +42,10 @@ def main():
 
     df = create_categorical_variables(df)
 
+    # Export
+    
+    export_data(df,"outputs/reports/")
+    
     # Visualizations
     generate_boxplots(df)
 
